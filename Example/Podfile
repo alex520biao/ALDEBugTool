@@ -17,7 +17,7 @@ end
 
 # Add global dependencies here.
 
-target 'ALDEBugTool_Example', :exclusive => true do
+target 'ALDEBugTool_Example' do
   # If ALDEBugTool depends on any private pod, remember to use `local_pod`
   # to refer it explicitly.
   # CocoaPods cannot distinguish public and private pod from podspec right now,
@@ -31,7 +31,7 @@ target 'ALDEBugTool_Example', :exclusive => true do
   pod "ALDEBugTool", :path => "../"
 end
 
-target 'ALDEBugTool_Tests', :exclusive => true do
+target 'ALDEBugTool_Tests' do
   # Add Tests specific dependencies here...
 
   pod "ALDEBugTool", :path => "../"

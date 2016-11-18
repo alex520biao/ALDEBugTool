@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01652AD9010B800AC2E27E3B /* libPods-ALDEBugTool_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E046B26CA333952BA2C221 /* libPods-ALDEBugTool_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		735DC198A96D1BD4DAFA1D88 /* libPods-ALDEBugTool_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DA1E7817D2BA46F13E5162 /* libPods-ALDEBugTool_Tests.a */; };
 		D955B5F21C35317B002E271A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D955B5F11C35317B002E271A /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +37,12 @@
 
 /* Begin PBXFileReference section */
 		116FFF63518E61BAE06BF316 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		45BF04B027608D3AB7DDA0EF /* ALDEBugTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ALDEBugTool.podspec; path = ../ALDEBugTool.podspec; sourceTree = "<group>"; };
+		11E046B26CA333952BA2C221 /* libPods-ALDEBugTool_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ALDEBugTool_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26DA1E7817D2BA46F13E5162 /* libPods-ALDEBugTool_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ALDEBugTool_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		323B3C452A71E86D4465D100 /* Pods-ALDEBugTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALDEBugTool_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALDEBugTool_Tests/Pods-ALDEBugTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		45BF04B027608D3AB7DDA0EF /* ALDEBugTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ALDEBugTool.podspec; path = ../ALDEBugTool.podspec; sourceTree = "<group>"; };
+		46648458367924B5EC8DA63E /* Pods-ALDEBugTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALDEBugTool_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALDEBugTool_Example/Pods-ALDEBugTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		50917044FA635278B8C538E9 /* Pods-ALDEBugTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALDEBugTool_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALDEBugTool_Tests/Pods-ALDEBugTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ALDEBugTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ALDEBugTool.app; path = ALDEBugTool_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,7 +62,8 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		D8217948C1B12180ADFE29F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7FFE3E65AD52FD606CDC8BD7 /* Pods-ALDEBugTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALDEBugTool_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALDEBugTool_Example/Pods-ALDEBugTool_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D8217948C1B12180ADFE29F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D955B5F11C35317B002E271A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				01652AD9010B800AC2E27E3B /* libPods-ALDEBugTool_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				735DC198A96D1BD4DAFA1D88 /* libPods-ALDEBugTool_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +101,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
+				6EAA418221324360C61CA118 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
+				11E046B26CA333952BA2C221 /* libPods-ALDEBugTool_Example.a */,
+				26DA1E7817D2BA46F13E5162 /* libPods-ALDEBugTool_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +182,17 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		6EAA418221324360C61CA118 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46648458367924B5EC8DA63E /* Pods-ALDEBugTool_Example.debug.xcconfig */,
+				7FFE3E65AD52FD606CDC8BD7 /* Pods-ALDEBugTool_Example.release.xcconfig */,
+				50917044FA635278B8C538E9 /* Pods-ALDEBugTool_Tests.debug.xcconfig */,
+				323B3C452A71E86D4465D100 /* Pods-ALDEBugTool_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ALDEBugTool_Example" */;
 			buildPhases = (
+				814DE6DFBB7AC18783D2E27A /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				FEBC9BE402DFC4E4B03BF3C2 /* [CP] Embed Pods Frameworks */,
+				D5C159AE31B4DF903B0A0A0B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ALDEBugTool_Tests" */;
 			buildPhases = (
+				74F33B2766BC5C3C2D562794 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
+				882D82A433E0DA9C6CCAD7FE /* [CP] Embed Pods Frameworks */,
+				D344390804E8CA2372F07D8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "PROJECT" */;
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "ALDEBugTool" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -261,6 +291,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74F33B2766BC5C3C2D562794 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		814DE6DFBB7AC18783D2E27A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		882D82A433E0DA9C6CCAD7FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALDEBugTool_Tests/Pods-ALDEBugTool_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D344390804E8CA2372F07D8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALDEBugTool_Tests/Pods-ALDEBugTool_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5C159AE31B4DF903B0A0A0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALDEBugTool_Example/Pods-ALDEBugTool_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEBC9BE402DFC4E4B03BF3C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALDEBugTool_Example/Pods-ALDEBugTool_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6003F586195388D20070C39A /* Sources */ = {
@@ -385,6 +508,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46648458367924B5EC8DA63E /* Pods-ALDEBugTool_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -401,6 +525,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FFE3E65AD52FD606CDC8BD7 /* Pods-ALDEBugTool_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -417,6 +542,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50917044FA635278B8C538E9 /* Pods-ALDEBugTool_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -439,6 +565,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323B3C452A71E86D4465D100 /* Pods-ALDEBugTool_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -458,7 +585,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6003F585195388D10070C39A /* Build configuration list for PBXProject "PROJECT" */ = {
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "ALDEBugTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5BD195388D20070C39A /* Debug */,
