@@ -56,6 +56,7 @@
     #endif //_ALAssertBody defined
 #else // NS_BLOCK_ASSERTIONS defined
     #if !defined(_ALAssertBody)
+    //Release模式下定义空宏
 
     //ALAssertThread
     #define ALAssertThread	do {} while(0)
