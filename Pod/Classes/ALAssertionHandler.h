@@ -78,6 +78,11 @@
 
 /**
  自定义断言处理类
+ ALAssert宏等价于如下代码,封装简化了NSAssert调用:
+    NSAssertionHandler *myHandler = [[ALAssertionHandler alloc] init];
+    [[[NSThread currentThread] threadDictionary] setValue:myHandler forKey:NSAssertionHandlerKey];
+    NSAssert(a == correctValue, @"a must equal to 5");
+
  */
 @interface ALAssertionHandler : NSAssertionHandler
 
