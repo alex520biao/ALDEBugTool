@@ -8,6 +8,7 @@
 
 #import "ALAppDelegate.h"
 #import "ALViewController.h"
+#import "ALAssertionHandler.h"
 
 @implementation ALAppDelegate
 
@@ -23,6 +24,18 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
+    //断言条件: a必须为5
+    int correctValue = 5;
+    int a = 4;
+    ALAssert(a == correctValue, @"a must equal to 5"); //一个参数
+//    ALAssert1(a == correctValue, @"a must equal to %d", correctValue); //一个参数
+//    ALAssert2(a == correctValue, @"a must equal to %d not equal to %d", correctValue,a); //两个参数
+//    ALParameterAssert((a == correctValue));
+    
+    //断言条件: str不为nil
+//    NSString *str = nil;
+//    ALParameterAssert((str != nil));
+
     return YES;
 }
 							
