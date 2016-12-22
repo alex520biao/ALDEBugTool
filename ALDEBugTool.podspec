@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ALDEBugTool"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "ALDEBugTool. ALDEBugTool ALDEBugTool ALDEBugTool"
   s.description      = <<-DESC.gsub(/^\s*\|?/,'')
                        ALDEBugTool is a convenient development of the test tool library
