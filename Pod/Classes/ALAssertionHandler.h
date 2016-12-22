@@ -22,7 +22,7 @@
             ALAssertionHandler *myHandler = [[ALAssertionHandler alloc] init]; \
             myHandler.origHandler =handler;\
             [[[NSThread currentThread] threadDictionary] setValue:myHandler forKey:NSAssertionHandlerKey]; \
-            NSLog(@"[NSThread currentThread] set ALAssertionHandler");  \
+            NSLog(@"[NSThread currentThread] set ALAssertionHandler: %@,origHandler:%@",myHandler,myHandler.origHandler);  \
         }   \
     } while(0)
 
@@ -32,10 +32,8 @@
         NSAssertionHandler *handler = [[[NSThread currentThread] threadDictionary] valueForKey:NSAssertionHandlerKey]; \
         if ([handler isKindOfClass:[ALAssertionHandler class]]) {    \
             ALAssertionHandler *myHandler = (ALAssertionHandler*)handler; \
-            if(myHandler.origHandler){    \
-                [[[NSThread currentThread] threadDictionary] setValue:myHandler.origHandler forKey:NSAssertionHandlerKey]; \
-            }\
-            NSLog(@"[NSThread currentThread] reset NSAssertionHandler");  \
+            NSLog(@"[NSThread currentThread] reset AssertionHandler:%@",myHandler.origHandler);  \
+            [[[NSThread currentThread] threadDictionary] setValue:myHandler.origHandler forKey:NSAssertionHandlerKey]; \
         }   \
     } while(0)
 

@@ -35,7 +35,10 @@
     //断言条件: str不为nil
     NSString *str = nil;
     ALParameterAssert((str != nil));
-
+    
+    //测试NSParameterAssert兼容性
+//    NSParameterAssert((str != nil));    
+    
     return YES;
 }
 							
