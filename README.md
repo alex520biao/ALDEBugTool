@@ -1,7 +1,9 @@
 # ALDEBugTool
+ALDEBugTool功能:
 
-简明扼要的描述功能
-
+1. ALAssert使用方法与NSAssert相同，学习成本为零
+2. ALAssert与NSAssert兼容，同时使用不会影响线程已有断言
+3. ALAssert自定义断言处理,通过弹框提醒警告以及分发给责任方。RD及QA测试阶段使用弹框比直接Crash要友好。
 
 ## Quick Start
 
@@ -12,14 +14,11 @@ pod "ALDEBugTool"
 ```
 
 ## Example
-通过demo code 展示此pod的主要功能，使用者阅读了demo code应该可以了解pod的大部分功能，API设计应尽量简洁易懂。
 
 ``` 
-demo code here
+demo请参考ALAppDelegate
+
 ```
-
-## 实现原理
-
 
 ## 维护者
 

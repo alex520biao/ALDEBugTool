@@ -1,5 +1,6 @@
 #source 'https://xxxx/cocoapods-specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, "7.0"
 
 # We don't use Swift internally. Disable this option.
 #use_frameworks!

@@ -10,12 +10,10 @@
 Pod::Spec.new do |s|
   s.name             = "ALDEBugTool"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ALDEBugTool."
+  s.summary          = "ALDEBugTool. ALDEBugTool ALDEBugTool ALDEBugTool"
   s.description      = <<-DESC.gsub(/^\s*\|?/,'')
-                       An optional longer description of ALDEBugTool
+                       ALDEBugTool is a convenient development of the test tool library
 
-                       | * Markdown format.
-                       | * Don't worry about the indent, we strip it!
                        DESC
   s.homepage         = "https://github.com/alex520biao/ALDEBugTool"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -31,7 +29,7 @@ Pod::Spec.new do |s|
 
   # Uncomment following lines if ALDEBugTool has some resource files.
   s.resource_bundles = {
-    'ALDEBugTool' => ['Pod/Assets/*.png']
+    #'ALDEBugTool' => ['Pod/Assets/*.png']
   }
 
   # Uncomment following lines if ALDEBugTool needs to link with some static libraries.

@@ -36,8 +36,8 @@
 //    [super handleFailureInMethod:selector object:object file:fileName lineNumber:line description:format];
     
     //断言弹框
-    UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"DEBug模式异常: 此异常弹框只会在DEBug包显示,Release正式包不会显示。仅供RD、QA及内部测试人员发现程序内部逻辑及数据异常"
-                                                      message:[NSString stringWithFormat:@"Assertion failure in -[%@ %@],%@:%li,reason:%@",NSStringFromClass([object class]), NSStringFromSelector(selector), fileName, (long)line,str]
+    UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"DEBug模式异常: 仅供RD、QA等捕获偶现的数据异常"
+                                                      message:[NSString stringWithFormat:@"请将此信息反馈给RD领红包！Assertion failure in -[%@ %@],%@:%li,reason:%@",NSStringFromClass([object class]), NSStringFromSelector(selector), fileName, (long)line,str]
                                                      delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
@@ -57,7 +57,27 @@
 
 - (void)handleFailureInFunction:(NSString *)functionName file:(NSString *)fileName lineNumber:(NSInteger)line description:(NSString *)format,...
 {
+#if DEBUG
+    //输出到控制台
     NSLog(@"NSCAssert Failure: Function (%@) in %@#%li", functionName, fileName, (long)line);
+    
+    //可变参数生成NSString
+    va_list args;
+    va_start(args, format);
+    NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    
+    //调用父类方法: 抛出异常使程序crash，可变参数传递
+    //    [super handleFailureInMethod:selector object:object file:fileName lineNumber:line description:format];
+    
+    //断言弹框
+    UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"DEBug模式异常: 仅供RD、QA等捕获偶现的数据异常"
+                                                      message:[NSString stringWithFormat:@"NSCAssert Failure: Function (%@) in %@#%li,,reason:%@", functionName, fileName, (long)line,str]
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [alertView show];
+#endif
 }
 
 
