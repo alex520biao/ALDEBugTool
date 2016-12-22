@@ -29,13 +29,13 @@ target 'ALDEBugTool_Example' do
 
   # Add Example specific dependencies here...
 
-  pod "ALDEBugTool", :path => "../"
+  pod "ALDEBugTool", :path => "../", :configuration => 'Debug'
 end
 
 target 'ALDEBugTool_Tests' do
   # Add Tests specific dependencies here...
 
-  pod "ALDEBugTool", :path => "../"
+  pod "ALDEBugTool", :path => "../", :configuration => 'Debug'
 
   pod 'Specta'
   pod 'Expecta'

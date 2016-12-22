@@ -7,10 +7,11 @@ ALDEBugTool功能:
 
 ## Quick Start
 
-目前都使用cocoapods安装，在Podfile中加入
+目前都使用cocoapods安装，在Podfile中加入。此工具应该只在Debug模式生效。
 
 ```
-pod "ALDEBugTool" 
+pod "ALDEBugTool", :configuration => 'Debug'
+
 ```
 
 ## Example
