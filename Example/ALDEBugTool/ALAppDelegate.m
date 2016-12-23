@@ -24,20 +24,27 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
-    //断言条件: a必须为5
-    int correctValue = 5;
-    int a = 4;
-//    ALAssert(a == correctValue, @"a must equal to 5");
-//    ALAssert1(a == correctValue, @"a must equal to %d", correctValue); //一个参数
-//    ALAssert2(a == correctValue, @"a must equal to %d not equal to %d", correctValue,a); //两个参数
-//    ALParameterAssert((a == 5));
     
-    //断言条件: str不为nil
-    NSString *str = nil;
-    ALParameterAssert((str != nil));
-    
-    //测试NSParameterAssert兼容性
-//    NSParameterAssert((str != nil));    
+    //新线程处理数据,主线程更新UI
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+        //断言条件: a必须为5
+        int correctValue = 5;
+        int a = 4;
+        ALAssert(a == correctValue, @"a must equal to 5");
+        //    ALAssert1(a == correctValue, @"a must equal to %d", correctValue); //一个参数
+        //    ALAssert2(a == correctValue, @"a must equal to %d not equal to %d", correctValue,a); //两个参数
+        //    ALParameterAssert((a == 5));
+        
+        //断言条件: str不为nil
+        NSString *str = nil;
+        ALParameterAssert((str != nil));
+        
+        //测试NSParameterAssert兼容性
+        //    NSParameterAssert((str != nil));    
+    });
+
+
     
     return YES;
 }

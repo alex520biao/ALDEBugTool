@@ -12,6 +12,11 @@ ALDEBugTool功能:
 ```
 pod "ALDEBugTool", :configuration => 'Debug'
 
+
+//使用时引入头文件
+#import <ALDEBugTool/ALAssertionHandler.h>
+
+
 ```
 
 ## Example

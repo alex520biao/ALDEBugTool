@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+FOUNDATION_EXPORT NSString * const ALAssertionHandlerKey;
+
+#define ALAssertionHandlerKey(handler) [NSString stringWithFormat:@"ALAssertionHandlerKey_%p",handler]
+
 /**
  ALAssert包装NSAssert宏,可以方便地实现检查并设置当前线程的断言处理类为自定义的ALAssertionHandler
  */
@@ -21,6 +25,8 @@
         if (![handler isKindOfClass:[ALAssertionHandler class]]) {    \
             ALAssertionHandler *myHandler = [[ALAssertionHandler alloc] init]; \
             myHandler.origHandler =handler;\
+            myHandler.callStackStr = [NSString stringWithFormat:@"%@",[NSThread callStackSymbols]];\
+            [[[NSThread currentThread] threadDictionary] setValue:myHandler forKey:ALAssertionHandlerKey(myHandler)]; \
             [[[NSThread currentThread] threadDictionary] setValue:myHandler forKey:NSAssertionHandlerKey]; \
             NSLog(@"[NSThread currentThread] set ALAssertionHandler: %@,origHandler:%@",myHandler,myHandler.origHandler);  \
         }   \
@@ -128,6 +134,16 @@
  线程原有AssertionHandler
  */
 @property (nonatomic, strong) NSAssertionHandler *origHandler;
+
+
+/**
+ 当前堆栈信息
+ */
+@property (nonatomic, copy) NSString *callStackStr;
+
+
+@property (nonatomic, weak) UIAlertView *alertView;
+
 
 
 
