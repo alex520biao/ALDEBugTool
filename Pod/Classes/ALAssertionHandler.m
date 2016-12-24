@@ -105,7 +105,7 @@ NSString *const ALAssertionHandlerKey = @"ALAssertionHandlerKey";
     }
     
     //释放ALAssertionHandler对象
-    [[[NSThread currentThread] threadDictionary] removeObjectForKey:ALAssertionHandlerKey(self)];
+    [[UIApplication sharedApplication].exDict removeObjectForKey:ALAssertionHandlerKey(self)];
 }
 
 -(void)dealloc{

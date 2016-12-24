@@ -35,20 +35,19 @@
         //    ALAssert1(a == correctValue, @"a must equal to %d", correctValue); //一个参数
         //    ALAssert2(a == correctValue, @"a must equal to %d not equal to %d", correctValue,a); //两个参数
         //    ALParameterAssert((a == 5));
-        
-        //断言条件: str不为nil
-        NSString *str = nil;
-        ALParameterAssert((str != nil));
-        
-        //测试NSParameterAssert兼容性
-        //    NSParameterAssert((str != nil));    
     });
 
+    //断言条件: str不为nil
+    NSString *str = nil;
+    ALParameterAssert((str != nil));
+    
+    //测试NSParameterAssert兼容性
+    //    NSParameterAssert((str != nil));
 
     
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

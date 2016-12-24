@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIApplication+al_exDict.h"
 
 FOUNDATION_EXPORT NSString * const ALAssertionHandlerKey;
 
@@ -26,7 +27,7 @@ FOUNDATION_EXPORT NSString * const ALAssertionHandlerKey;
             ALAssertionHandler *myHandler = [[ALAssertionHandler alloc] init]; \
             myHandler.origHandler =handler;\
             myHandler.callStackStr = [NSString stringWithFormat:@"%@",[NSThread callStackSymbols]];\
-            [[[NSThread currentThread] threadDictionary] setValue:myHandler forKey:ALAssertionHandlerKey(myHandler)]; \
+            [[UIApplication sharedApplication].exDict setValue:myHandler forKey:ALAssertionHandlerKey(myHandler)];\
             [[[NSThread currentThread] threadDictionary] setValue:myHandler forKey:NSAssertionHandlerKey]; \
             NSLog(@"[NSThread currentThread] set ALAssertionHandler: %@,origHandler:%@",myHandler,myHandler.origHandler);  \
         }   \
