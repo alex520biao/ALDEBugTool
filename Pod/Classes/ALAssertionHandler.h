@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UIApplication+al_exDict.h"
 
 FOUNDATION_EXPORT NSString * const ALAssertionHandlerKey;
 
@@ -119,6 +118,17 @@ FOUNDATION_EXPORT NSString * const ALAssertionHandlerKey;
 
     #endif
 #endif // NS_BLOCK_ASSERTIONS defined
+
+
+@interface UIApplication (al_exDict)
+
+/**
+ 扩展数据
+ */
+@property (nonatomic, strong) NSMutableDictionary *exDict;
+
+
+@end
 
 
 /**
